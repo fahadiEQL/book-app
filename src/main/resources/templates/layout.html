@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="UTF-8">
+        <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE">BOOK-APP</title>
+    </head>
+    <body>
+        <header style="border:1px solid black">
+            <h1> LE HEADER </h1>
+            <a href="#" th:href="@{'/logout'}"> se deconnecter </a>
+        </header>
+
+        <div layout:fragment="content">
+            <h1> Le contenu de la page s'affiche ici</h1>
+        </div>
+
+        <footer layout:fragment="footer" style="border:2px solid lavender">
+            <h2> LE FOOTER </h2>
+        </footer>
+
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulaire book</title>
+        <link rel="stylesheet" href="/CSS/style.css"/>
+    </head>
+    <body>
+        <h1> Complétez les informations : </h1>
+        <form th:object="${book}" method="post" th:action="@{'/addbook'}">
+            <input type="hidden" th:field="*{id}">
+            <div>
+                <label>Titre :</label>
+                <input type="text" th:field="*{title}"/>
+                <!--2eme option : <input type="text" th:field="${book.title}"/> -->
+            </div>
+            <div>
+                <label>ISBN : </label>
+                <input type="text" th:field="*{isbn}"/>
+            </div>
+
+           <h2> Auteur : </h2>
+
+            <div>
+                <label>Prénom : </label>
+                <input type="text" th:field="*{author.firstName}"/>
+            </div>
+            <div>
+                <label>Nom : </label>
+                <input type="text" th:field="*{author.name}"/>
+            </div>
+
+            <h2> Editeur : </h2>
+            <div>
+                <label>Nom : </label>
+                <input type="text" th:field="*{publisher.name}">
+            </div>
+
+            <div>
+                <label>Adresse : </label>
+                <input type="text" th:field="*{publisher.address}">
+            </div>
+
+            <div>
+                <label>Ville : </label>
+                <input type="text" th:field="*{publisher.city}">
+            </div>
+
+            <div>
+                <label>Code postal : </label>
+                <input type="text" th:field="*{publisher.zipCode}">
+            </div>
+
+            <button type="submit"> Valider </button>
+        </form>
+
+    </body>
+</html>

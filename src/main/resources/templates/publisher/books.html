@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Livres par Editeur</title>
+        <link rel="stylesheet" href="/CSS/style.css"/>
+    </head>
+    <body>
+        <h1 th:text=" 'Liste des livres de : ' + ${publisher.name}"></h1>
+        <ul th:each="book : ${books}">
+            <li th:text="'Titre : ' + ${book.title}"></li>
+            <li th:text="'Isbn : ' + ${book.isbn}"></li>
+            <li th:text="'Auteur : ' + ${book.author.firstName} + ' ' + ${book.author.name}"></li>
+        </ul>
+    </body>
+</html>

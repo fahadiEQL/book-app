@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+                xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+                layout:decorate="~{layout.html}">
+    <head>
+        <link rel="stylesheet" href="/CSS/style.css"/>
+    </head>
+    <body>
+        <div layout:fragment="content">
+            <h1> Bienvenue dans l'e-bibliothèque</h1>
+            <a href="#" th:href="@{'/book/list'}"> Tous mes livres </a>
+            <br/>
+            <a href="#" th:href="@{'/publisher/list'}"> Tous mes éditeurs</a>
+            <br/>
+            <img th:src="@{/img/livre.png}"/>
+        </div>
+    </body>
+</html>

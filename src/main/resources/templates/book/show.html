@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Détails d'un livre</title>
+        <link rel="stylesheet" href="/CSS/style.css"/>
+    </head>
+    <body>
+    <h1 th:text="${book.title}"></h1>
+      <ul>
+          <li th:text=" 'ISBN : ' + ${book.isbn}"></li>
+          <li th:text=" 'Auteur: ' + ${book.author.firstName} + ' ' + ${book.author.name}"></li>
+          <li th:text=" 'Publisher: ' + ${book.publisher.name}"></li>
+      </ul>
+    </body>
+</html>
